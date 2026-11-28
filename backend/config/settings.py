@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 import ssl
 from datetime import timedelta
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,7 +31,11 @@ DEBUG = os.getenv("DEBUG")
 
 AUTH_USER_MODEL = 'store.CustomUser'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    ".vercel.app",
+]
 
 
 # Application definition
