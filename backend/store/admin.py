@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import  UserProfile
-from .models import Category, Product, UserProfile
+from .models import Category, Product, UserProfile, Order, OrderItem
 
 
 # Register your models here.
@@ -9,4 +9,6 @@ from .models import Category, Product, UserProfile
 admin.site.register(UserProfile)
 admin.site.register(Category)
 admin.site.register(Product)
+admin.site.register(Order)
+admin.site.register(OrderItem)
 
